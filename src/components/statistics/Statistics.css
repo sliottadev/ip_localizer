@@ -1,0 +1,24 @@
+.Table>table{
+    background-color: white!important;
+}
+
+.table{
+    background-color: white!important;
+    border: transparent!important;
+    border-radius: 15px;
+    font-size: 3vw!important;
+    opacity: 80%;
+}
+
+.th{
+    background-color: violet!important;
+}
+
+.stt__colInvoc{
+    width: 85px;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 0!important;
+}

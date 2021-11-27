@@ -1,0 +1,26 @@
+.Result{
+    border: white 2px solid;
+    border-radius: 7px;
+    background-color: whitesmoke;
+    opacity: 80%;
+}
+.itemList__firstColumn{
+    text-align: right;
+}
+
+.itemList__firstColumn>p{
+    color:grey;
+    margin-bottom: 0;
+    font-size: 3vw;
+}
+
+.itemList__secondColumn{
+    text-align: left;
+    padding-left: 0;
+}
+
+.itemList__secondColumn>p{
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 3vw;
+}
