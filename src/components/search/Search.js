@@ -2,6 +2,7 @@ import './Search.css'
 import {Row, InputGroup, FormControl, Button} from 'react-bootstrap'
 
 function Search(props){
+
     return(
         <Row className="Search">
             <InputGroup className="mb-3">
