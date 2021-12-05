@@ -1,7 +1,8 @@
 import './History.css'
 import {Table} from 'react-bootstrap'
 
-function History() {
+function History(props) {
+  if (props.showing){    
     return (
         <Table striped bordered hover size="sm">
           <thead>
@@ -26,6 +27,9 @@ function History() {
           </tbody>
         </Table>    
     )
+  } else {
+    return ""
+  }
 }
 
 export default History

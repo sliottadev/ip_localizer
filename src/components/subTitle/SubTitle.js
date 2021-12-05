@@ -7,6 +7,12 @@ function SubTitle(Props) {
     
     const [showControl, setShowControl] = useState(true)
 
+    const show = ()=>{
+        Props.control(!Props.showing)
+        setShowControl(!showControl)
+        console.log(Props.showing);
+    }
+
     return (
         <Row className="SubTitle">
             <Col xs={11}>
@@ -15,9 +21,9 @@ function SubTitle(Props) {
             <Col xs={1}>
                 { showControl
                     ? 
-                        <VisibilityOff  onClick={ ()=>setShowControl( !showControl) }/>
+                        <VisibilityOff  onClick={ show }/>
                     :
-                        <Visibility  onClick={ ()=>setShowControl( !showControl) }/>
+                        <Visibility  onClick={ show }/>
                 }
             </Col>
         </Row>

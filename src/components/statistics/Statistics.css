@@ -1,17 +1,12 @@
 .Table>table{
-    background-color: white!important;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .table{
-    background-color: white!important;
+    background-color: rgba(255,255,255,0.8);
     border: transparent!important;
     border-radius: 15px;
     font-size: 3vw!important;
-    opacity: 80%;
-}
-
-.th{
-    background-color: violet!important;
 }
 
 .stt__colInvoc{

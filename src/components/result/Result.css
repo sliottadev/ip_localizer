@@ -1,8 +1,6 @@
 .Result{
-    border: white 2px solid;
     border-radius: 7px;
-    background-color: whitesmoke;
-    opacity: 80%;
+    background-color: rgba(255,255,255,0.8);
 }
 .itemList__firstColumn{
     text-align: right;
