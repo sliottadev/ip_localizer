@@ -7,23 +7,19 @@ function History(props) {
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
+              <th>Order</th>
               <th >IP</th>
               <th>Pais</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>103.4.99.16</td>
-              <td>Argentina</td>
-            </tr>
-            <tr>
-              <td>131.0.212.0</td>
-              <td>Uruguay</td>
-            </tr>
-            <tr>
-              <td>1.33.213.199</td>
-              <td>Brasil</td>
-            </tr>
+            {props.data.map((item, index)=>(
+              <tr>
+                <td key={index}>{index}</td>
+                <td>{item.ip}</td>
+                <td>{item.country}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>    
     )

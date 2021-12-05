@@ -1,7 +1,11 @@
-function getLocation(ip){
+import $ from 'jquery'
+
+function locateIP(ip){
     let settings = {
         url : "https://api.ip2country.info/ip?" + ip
-    }
-
-    return $.ajax(settings)
+      }
+  
+      return $.ajax(settings)
 }
+
+export {locateIP}
