@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Title from './components/title/Title';
 import Search from './components/search/Search';
@@ -17,7 +17,8 @@ function App() {
   const [showHistory, setShowHistory] = useState(true)
   const [history, setHistory] = useState([]);
 
-  const getIpExample = (ip) =>{
+  const getIpData = (ip)=>{
+    console.log("ejecutado")
     locateIP(ip).done( response=>{
       let historyArr = history;
       historyArr.push( new HistoryModel(history.length+1, ip, response.countryName) )
@@ -25,13 +26,14 @@ function App() {
     })
   }
 
-  getIpExample("5.6.7.8")
-  getIpExample("5.6.7.8")
-  getIpExample("5.6.7.8")
-  console.log(history)
+  useEffect( ( )=>{
+    setShowHistory(true)
+  }
+  , [setHistory])
 
   return (
     <div className="App">
+      <button onClick={() => {getIpData("5.6.7.8")}}>TEST!</button>
       <Title  className="app__title" />
       <div className="app_container">
         <Search className="app__search" />
