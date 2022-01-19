@@ -2,17 +2,17 @@
     border-radius: 7px;
     background-color: rgba(255,255,255,0.8);
 }
-.itemList__firstColumn{
+.itemList__firstColumn, .itemListImage__firstColumn{
     text-align: right;
 }
 
-.itemList__firstColumn>p{
+.itemList__firstColumn>p, .itemListImage__firstColumn>p{
     color:grey;
     margin-bottom: 0;
     font-size: 3vw;
 }
 
-.itemList__secondColumn{
+.itemList__secondColumn, .itemListImage__secondColumn{
     text-align: left;
     padding-left: 0;
 }
@@ -21,4 +21,9 @@
     font-weight: bold;
     margin-bottom: 0;
     font-size: 3vw;
+}
+
+.itemListImage__secondColumn>img{
+    width: 60px;
+    margin-bottom: 5px;
 }

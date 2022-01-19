@@ -14,8 +14,8 @@ function History(props) {
           </thead>
           <tbody>
             {props.data.map((item, index)=>(
-              <tr>
-                <td key={index}>{item.id}</td>
+              <tr key={index}>
+                <td>{item.id}</td>
                 <td>{item.ip}</td>
                 <td>{item.country}</td>
               </tr>

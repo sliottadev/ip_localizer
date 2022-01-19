@@ -8,32 +8,27 @@ function Statistics(props) {
           <Table striped bordered hover size="sm">
             <thead>
               <tr>
-                <th >Pais</th>
-                <th>Distancia</th>
-                <th className="stt__colInvoc">Invocaciones</th>
+                <th >Country</th>
+                <th>Distance</th>
+                <th className="stt__colInvoc">Invocations</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Argentina</td>
-                <td>0 Km</td>
-                <td className="stt__colInvoc">3</td>
-              </tr>
-              <tr>
-                <td>Uruguay</td>
-                <td>800 Km</td>
-                <td className="stt__colInvoc">5</td>
-              </tr>
-              <tr>
-                <td>Brasil</td>
-                <td>1800 Km</td>
-                <td className="stt__colInvoc">2</td>
-              </tr>
+              { 
+                props.data!=null &&
+                props.data.items.map((item, index)=>(
+                  <tr key={index}>
+                    <td>{item.country}</td>
+                    <td>{item.distance.toFixed(2) + " Kms."}</td>
+                    <td className="stt__colInvoc">{item.invoke}</td>
+                  </tr>   
+                ))
+              }
             </tbody>
           </Table>
-          <p>Greater distance traveled: {"1800 Km"} </p>
-          <p>Shortest distance traveled: {"1800 Km"} </p>
-          <p>Average distance traveled: {"1800 Km"} </p>
+          <p><strong>Greater distance traveled:</strong> {(props.data!=null) ? props.data.GreaterDistance.toFixed(2) + ' Kms.' : '--- Kms.'} </p>
+          <p><strong>Shortest distance traveled: </strong>{(props.data!=null) ? props.data.ShortestsDistance.toFixed(2) + ' Kms.' : '--- Kms.'} </p>
+          <p><strong>Average distance traveled: </strong>{(props.data!=null) ? props.data.AverangeDistance.toFixed(2) + ' Kms.' : '--- Kms.'} </p>
         </div>
       )
   } else {
