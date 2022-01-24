@@ -14,17 +14,17 @@ const copyArray = (source)=>{
 
 const getLenguagesStr = (lenguages) => {
     let str = ""
-    Object.values(lenguages).map((values)=>{
-        str = str + values+', ';
-    })
+    Object.values(lenguages).map((values)=>(
+        str = str + values+', '
+    ))
     return str.substring(0,str.length-2);
 }
 
 const getCurrencies = (curr) =>{
     let str = ""
-    Object.values(curr).map((value)=>{
+    Object.values(curr).map((value)=>(
         str = str + value.name + "("+value.symbol+"), "
-    })
+    ))
     return str.substring(0, str.length-2);
 }
 
@@ -54,7 +54,7 @@ const getDistanceKm = (lat_1, lon_1, lat_2, lon_2) => {
 const addStatisticData= (statModel, newData)=>{
     var item = new StatisticItem(newData.name, newData.distance);
     for (let i=0; i<statModel.items.length; i++){
-        if(statModel.items[i].country == newData.name){
+        if(statModel.items[i].country === newData.name){
             statModel.items[i].invoke++;
             return;
         }
